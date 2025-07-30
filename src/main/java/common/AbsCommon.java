@@ -8,7 +8,6 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 
 public class AbsCommon {
 
-  //comment
   protected Page page;
 
   public AbsCommon(Page page) {
