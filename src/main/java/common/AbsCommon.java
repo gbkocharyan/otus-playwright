@@ -25,6 +25,12 @@ public class AbsCommon {
     return locator.textContent();
   }
 
+  public void fillField(Locator locator, String value) {
+    locator.scrollIntoViewIfNeeded();
+    waitForVisibility(locator);
+    locator.fill(value);
+  }
+
   public void click(Locator locator) {
     locator.scrollIntoViewIfNeeded();
     waitForVisibility(locator);
