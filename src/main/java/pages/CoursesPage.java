@@ -10,9 +10,9 @@ import java.util.List;
 @Path("/catalog/courses")
 public class CoursesPage extends AbsBasePage<CoursesPage> {
 
-  Locator allDirectionsCheckbox = page.locator("xpath=//main/div/section[1]/div[1]/div[2]/div/div/div[1]/div/input");
-  Locator anyLevelCheckbox = page.locator("xpath=//main/div/section[1]/div[2]/div[2]/div/div/div[1]/div/input");
-  Locator resetFilter = page.locator("//*[@id=\"__next\"]/div[1]/main/div/section[1]/button");
+  Locator allDirectionsCheckbox = page.getByRole(AriaRole.CHECKBOX, new Page.GetByRoleOptions().setName("Все направления"));
+  Locator anyLevelCheckbox = page.getByRole(AriaRole.CHECKBOX, new Page.GetByRoleOptions().setName("Любой уровень"));
+  Locator resetFilter = page.getByText("Очистить фильтры");
   Locator slider = page.getByRole(AriaRole.SLIDER);
   Locator coursesDates = page.locator("//*[@id=\"__next\"]/div[1]/main/div/section[2]/div[2]/div/a/div[2]/div/div");
   Locator architecture = page.getByText("Архитектура");
@@ -31,7 +31,7 @@ public class CoursesPage extends AbsBasePage<CoursesPage> {
 
   public boolean isTestingCourseSelected(Page page) {
     page.waitForLoadState();
-    Locator testingCourse = page.locator("xpath=//main/div/section[1]/div[1]/div[2]/div/div/div[11]/div/input");
+    Locator testingCourse = page.getByRole(AriaRole.CHECKBOX, new Page.GetByRoleOptions().setName("Тестирование"));
     return isChecked(testingCourse);
   }
 

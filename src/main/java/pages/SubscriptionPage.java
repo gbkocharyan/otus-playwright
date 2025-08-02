@@ -9,8 +9,8 @@ import popups.LoginPopup;
 @Path("/subscription")
 public class SubscriptionPage extends AbsBasePage<SubscriptionPage> {
 
-  Locator buy = page.locator("xpath=/html/body/div[1]/div[1]/main/section[2]/div/div/div[1]/div/div[2]/button");
-  Locator moreInfo = page.locator("xpath=/html/body/div[1]/div[1]/main/section[2]/div/div[2]/div[2]/div/div[2]/button");
+  Locator buy = page.getByText("Купить");
+  Locator moreInfo = page.locator("//section[2]/div/div[2]/div[2]/div/div[2]/button");
 
   public SubscriptionPage(Page page) {
     super(page);
@@ -19,10 +19,9 @@ public class SubscriptionPage extends AbsBasePage<SubscriptionPage> {
   @Inject
   private LoginPopup loginPopup;
 
-  public LoginPopup clickBuySubscription() {
+  public void clickBuySubscription() {
     Locator nth = buy.nth(1);
     click(nth);
-    return loginPopup;
   }
 
   public SubscriptionPage clickMoreInfo() {

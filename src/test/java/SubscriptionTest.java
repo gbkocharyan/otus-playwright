@@ -28,6 +28,10 @@ public class SubscriptionTest {
         .as("the Подробнее text is wrong")
         .isTrue();
     subscriptionPage.clickBuySubscription();
+    softAssertions.assertThat(loginPopup.isXButtonVisible())
+        .as("Login page's X button is not visible")
+        .isTrue();
     softAssertions.assertAll();
   }
+
 }

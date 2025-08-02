@@ -7,7 +7,7 @@ import com.microsoft.playwright.Page;
 @Path("/uslugi-kompaniyam")
 public class CompanyServicesPage extends AbsBasePage<CompanyServicesPage> {
 
-  Locator moreInfo = page.locator("//*[@id=\"__next\"]/div[1]/main/div[9]/div/div/a/button");
+  Locator moreInfo = page.getByText("Подробнее");
 
   public CompanyServicesPage(Page page) {
     super(page);

@@ -6,14 +6,14 @@ import common.AbsCommon;
 
 public class LoginPopup extends AbsCommon {
 
-  Locator entrance = page.getByText("Вход");
-  Locator emailField = page.locator("//*[@id=\"__PORTAL__\"]//div[1]/div/input");
-  Locator passwordField = page.getByText("password");
-  Locator loginButton = page.locator("//*[@id=\"__PORTAL__\"]//div[1]/div/button/div");
+  Locator xbutton = page.locator("//*[@id=\"__PORTAL__\"]/div/div/div[2]/div");
 
   public LoginPopup(Page page) {
     super(page);
   }
 
+  public boolean isXButtonVisible() {
+    return isVisible(xbutton);
+  }
 
 }
