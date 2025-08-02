@@ -5,7 +5,6 @@ import com.microsoft.playwright.*;
 import modules.GuicePageModule;
 import modules.GuicePopupModule;
 import org.junit.jupiter.api.extension.*;
-
 import java.io.File;
 import java.util.List;
 

@@ -8,7 +8,7 @@ public abstract class AbsBasePage<T> extends AbsCommon {
 
   private final String baseUrl = System.getProperty("baseUrl", "https://otus.ru");
 
-  public AbsBasePage (Page page) {
+  public AbsBasePage(Page page) {
     super(page);
   }
 

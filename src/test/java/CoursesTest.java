@@ -1,11 +1,11 @@
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 import com.google.inject.Inject;
 import extensions.UIExtension;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import pages.CoursesPage;
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @ExtendWith(UIExtension.class)
 public class CoursesTest {
