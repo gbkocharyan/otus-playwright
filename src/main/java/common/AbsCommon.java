@@ -6,7 +6,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.BoundingBox;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
-public class AbsCommon {
+public abstract class AbsCommon {
 
   protected Page page;
 
